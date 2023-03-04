@@ -9,6 +9,4 @@ const setFontSize = () => {
 
 setFontSize();
 
-slider.addEventListener('input', () => {
-  setFontSize();
-});
+slider.addEventListener('input', setFontSize);
