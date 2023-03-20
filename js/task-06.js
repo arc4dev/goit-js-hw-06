@@ -2,7 +2,7 @@
 
 const input = document.getElementById('validation-input');
 
-input.addEventListener('focusout', () => {
+input.addEventListener('blur', () => {
   //remove all the classes
   input.classList.remove('valid', 'invalid');
 

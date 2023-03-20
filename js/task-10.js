@@ -23,7 +23,7 @@ const createBoxes = (amount) => {
   for (let i = 0; i < amount; i++) {
     width += 10;
     height += 10;
- 8 
+
     container.insertAdjacentHTML(
       'beforeend',
       `<div style="width: ${width}px; height: ${height}px; background-color: ${getRandomHexColor()};" ></div>`
@@ -40,11 +40,10 @@ const deleteBoxes = () => {
 controls.addEventListener('click', (e) => {
   if (e.target.type !== 'button') return;
 
-  const target = e.target;
   const amount = input.value;
 
-  if (target.getAttributeNames()[1] === 'data-create') createBoxes(amount);
-  if (target.getAttributeNames()[1] === 'data-destroy') deleteBoxes();
+  if (e.target.hasAttribute('data-create')) createBoxes(amount);
+  if (e.target.hasAttribute('data-destroy')) deleteBoxes();
 
   input.value = '';
 });
