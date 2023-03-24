@@ -11,16 +11,18 @@ const ingredients = [
   'Condiments',
 ];
 
+const ingredientsEl = [];
+
 const addIngredients = (arr) => {
   arr.forEach((item) => {
-    //init
     const ingredient = document.createElement('li');
     ingredient.classList.add('item');
     ingredient.textContent = item;
 
-    //append
-    container.append(ingredient);
+    ingredientsEl.push(ingredient);
   });
 };
 
 addIngredients(ingredients);
+
+container.append(...ingredientsEl);

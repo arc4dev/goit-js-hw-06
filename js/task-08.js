@@ -14,7 +14,7 @@ form.addEventListener('submit', (e) => {
 
   const acc = {
     [email.name]: email.value,
-    [password.na]: password.value,
+    [password.name]: password.value,
   };
   console.log(acc);
 
